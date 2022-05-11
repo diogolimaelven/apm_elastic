@@ -1,0 +1,25 @@
+Flask==2.0.3
+psycopg==3.0.10
+psycopg2==2.8.4
+psycopg2-binary==2.9.3
+python-dotenv==0.20.0
+
+
+
+#install Docker 
+
+#curl -fsSL https://get.docker.com -o get-docker.sh
+#sudo sh get-docker.sh
+
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#sudo chmod +x /usr/local/bin/docker-compose
+
+#DEP psycopg
+#sudo apt install postgresql nginx
+#sudo apt-get install libpq-dev python-dev
+
+
+# git clone 
+
+#python3 apm.py
+

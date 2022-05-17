@@ -1,0 +1,81 @@
+2022-05-17 14:16:12,627 WARNING werkzeug MainThread :  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-05-17 14:16:12,628 INFO werkzeug MainThread :  * Running on http://192.168.100.6:5000/ (Press CTRL+C to quit)
+2022-05-17 14:17:57,138 WARNING werkzeug MainThread :  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-05-17 14:17:57,138 INFO werkzeug MainThread :  * Running on http://192.168.100.6:5000/ (Press CTRL+C to quit)
+2022-05-17 14:18:04,443 CRITICAL apm Thread-1 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:18:04,443 ERROR apm Thread-1 : Exception on / [GET]
+Traceback (most recent call last):
+  File "apm_lab/apm.py", line 17, in hello_world
+    conexao = psycopg.connect(host=os.environ['DATABASE_HOST'],
+  File "/usr/local/lib/python3.8/dist-packages/psycopg/connection.py", line 572, in connect
+    raise ex.with_traceback(None)
+psycopg.OperationalError: connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "apm_lab/apm.py", line 30, in hello_world
+    return render_template('erro.html', d_output=d_result)
+UnboundLocalError: local variable 'd_result' referenced before assignment
+2022-05-17 14:18:04,447 INFO werkzeug Thread-1 : 127.0.0.1 - - [17/May/2022 14:18:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-05-17 14:18:34,460 CRITICAL apm Thread-2 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:18:34,460 ERROR apm Thread-2 : Exception on / [GET]
+Traceback (most recent call last):
+  File "apm_lab/apm.py", line 17, in hello_world
+    conexao = psycopg.connect(host=os.environ['DATABASE_HOST'],
+  File "/usr/local/lib/python3.8/dist-packages/psycopg/connection.py", line 572, in connect
+    raise ex.with_traceback(None)
+psycopg.OperationalError: connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/diogo/.local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "apm_lab/apm.py", line 30, in hello_world
+    return err
+UnboundLocalError: local variable 'd_result' referenced before assignment
+2022-05-17 14:18:34,461 INFO werkzeug Thread-2 : 127.0.0.1 - - [17/May/2022 14:18:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-05-17 14:19:19,053 WARNING werkzeug MainThread :  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-05-17 14:19:19,053 INFO werkzeug MainThread :  * Running on http://192.168.100.6:5000/ (Press CTRL+C to quit)
+2022-05-17 14:19:20,974 CRITICAL apm Thread-1 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:19:20,982 INFO werkzeug Thread-1 : 127.0.0.1 - - [17/May/2022 14:19:20] "GET / HTTP/1.1" 200 -
+2022-05-17 14:19:56,460 CRITICAL apm Thread-2 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:19:56,460 INFO werkzeug Thread-2 : 127.0.0.1 - - [17/May/2022 14:19:56] "GET / HTTP/1.1" 200 -
+2022-05-17 14:20:10,983 CRITICAL apm Thread-3 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:20:10,983 INFO werkzeug Thread-3 : 127.0.0.1 - - [17/May/2022 14:20:10] "GET / HTTP/1.1" 200 -
+2022-05-17 14:20:15,317 CRITICAL apm Thread-4 : connection failed: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+2022-05-17 14:20:15,318 INFO werkzeug Thread-4 : 127.0.0.1 - - [17/May/2022 14:20:15] "GET / HTTP/1.1" 200 -
